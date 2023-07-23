@@ -1,5 +1,7 @@
  # [parts](https://brickarchitect.com/most-common-lego-parts/)
 
+The parts you can choose are below. There are only two options for each component so we avoid the [fallacy of choice](https://leanlogic.online/glossary/choice/). There's a Large version and a Small version. Specifics can be gathered later.
+
 1. ![3004](./img/3004.png) 
   * A large piece of Business logic
 2. ![3004](./img/3005.png) 
@@ -17,6 +19,10 @@
 8. ![3004](./img/99780.png) 
   * The Large API - User interface
 ## [the architecture]()
+
+The architecture options will become obvious with the scope/requirements and business problem(s) you're trying to solve.
+
+[template](./.github/FEATURE_TEMPLATE.md)
 
 ### small local version - website - multi shot
 2. ![3004](./img/3005.png) 
