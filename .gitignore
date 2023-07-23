@@ -1,0 +1,8 @@
+# secrets
+.secrets/
+# compose local sync
+frontend/database/
+frontend/html/
+
+
+
