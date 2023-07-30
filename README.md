@@ -55,3 +55,33 @@ The architecture options will become obvious with the scope/requirements and bus
   * The Language Model
 8. ![3004](./img/99780.png) 
   * The Large API - User interface
+
+
+## [llm training](https://www.coursera.org/learn/generative-ai-with-llms/lecture/gZArr/computational-challenges-of-training-llms)
+moving from a general LLM to a specific use case requires training
+a small set of data and 
+a large set of compute
+### [models memory anatomy](https://huggingface.co/docs/transformers/v4.20.1/en/perf_train_gpu_one#anatomy-of-models-memory)
+
+. The components on GPU memory are the following: 
+1. model weights
+2. optimizer states
+3. gradients
+4. forward activations saved for gradient computation
+5. temporary buffers
+6. functionality-specific memory
+
+#### Back of the envelope calcululation
+
+##### Weights
+* 1 parameter = 4 bytes (32-bit float)
+* 1B parameters = 4 * 10^9 bytes = 4GB
+##### Adam optimizer (2-states)
+* +8 bytes per parameter
+##### Gradients
+* +4 bytes per parameter
+##### Activations and temp memory (variable size)
+* +8 bytes per parameter (high-end estimate)
+
+#### Total = 4 bytes per parameter +20 extra bytes per parameter
+
