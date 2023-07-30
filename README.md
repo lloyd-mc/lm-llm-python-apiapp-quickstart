@@ -74,14 +74,19 @@ a large set of compute
 #### Back of the envelope calcululation
 
 ##### Weights
+![1-param](https://brickarchitect.com/content/parts/3005.png)
 * 1 parameter = 4 bytes (32-bit float)
 * 1B parameters = 4 * 10^9 bytes = 4GB
+![1-param](https://brickarchitect.com/content/parts/3003.png)
 ##### Adam optimizer (2-states)
 * +8 bytes per parameter
+![8-adam](https://brickarchitect.com/content/parts/3001.png)
 ##### Gradients
 * +4 bytes per parameter
+![gradients](https://brickarchitect.com/content/parts/3003.png)
 ##### Activations and temp memory (variable size)
 * +8 bytes per parameter (high-end estimate)
-
+![act-temp-mem](https://brickarchitect.com/content/parts/3001.png)
 #### Total = 4 bytes per parameter +20 extra bytes per parameter
+![total](https://brickarchitect.com/content/parts/85941.png)
 
