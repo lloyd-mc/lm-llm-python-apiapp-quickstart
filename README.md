@@ -72,7 +72,9 @@ a large set of compute
 6. functionality-specific memory
 
 #### Back of the envelope calcululation
-
+for 1B(illion) parameter model you'll need:
+1. To store the model: 4GB @32 bit full precision
+2. To train the model: 80GB @32 bit full precision 
 ##### Weights
 ![1-param](https://brickarchitect.com/content/parts/3005.png)
 * 1 parameter = 4 bytes (32-bit float)
@@ -89,4 +91,3 @@ a large set of compute
 ![act-temp-mem](https://brickarchitect.com/content/parts/3001.png)
 #### Total = 4 bytes per parameter +20 extra bytes per parameter
 ![total](https://brickarchitect.com/content/parts/85941.png)
-
